@@ -168,7 +168,7 @@ function run_model(experiment_num)
         tc_true_dgp[t] = shortest_path_on_grid(N, graph[t], adj_matrix[t], tc_walk, road_edges[t], tc_road, river_edges[t], tc_river, bridge_edges[t], tc_bridge, ferry_edges[t], tc_ferry_true_distrib[1]);
 
         # Vector with shortest path matrix weighted on the true DGP in each period
-        tc_true_dgp_weighted[t] = weight_shortest_path(tc_true_dgp[t], tc_ferry_true_distrib[2]);
+        tc_true_dgp_weighted[t] = weight_shortest_path(nobs, tc_true_dgp[t], tc_ferry_true_distrib[2]);
 
     end
 
