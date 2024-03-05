@@ -277,7 +277,7 @@ function run_model(experiment_num)
     experiment_vec      = vec(experiment_data[experiment_data[:, 1] .== experiment_num, 2:end]);
     
     # GMM evaluation 
-    gmm_value, eval_time = f_additive(experiment_vec, params_to_est, param, w_D, L_D, tc_on_grid, wL_periods, w_periods, L_periods, T_periods, D_periods, nobs, model, a_ini, b_ini)
+    gmm_value, eval_time = f_additive(experiment_vec, params_to_est, param, w_D, L_D, tc_on_grid, wL_periods, w_periods, L_periods, T_periods, D_periods, nobs, model, diff_periods, a_ini, b_ini)
 
     #####################
     ### Write results ###

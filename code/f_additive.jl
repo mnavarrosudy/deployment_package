@@ -1,4 +1,4 @@
-function f_additive(psi_hat, params_to_est, param, w, L, tc_on_grid, wL_periods, w_periods, L_periods, T_periods, D_periods, nobs, model, a_ini = nothing, b_ini = nothing)
+function f_additive(psi_hat, params_to_est, param, w, L, tc_on_grid, wL_periods, w_periods, L_periods, T_periods, D_periods, nobs, model, diff_periods, a_ini = nothing, b_ini = nothing)
 
     xtic = time()
 
