@@ -4,6 +4,15 @@ function solveLw_whenever(param, a, b, L_ss, tc, w_periods, L_periods, T_periods
     ### First step: Convergence of L in the year we want L to be ###
     ################################################################
 
+    # Assign values from param
+    alpha = param[1]
+    theta = param[2]
+    epsilon = param[3]
+    phi = param[6]
+    H = param[7] * ones(nobs)
+    LL = param[8]
+    beta = param[10]
+
     L_year = L_periods[d]; # Year of data for which (a, b) are solved.
     T_up_to_L = T_periods[T_periods .<= L_year]; # Years of transportation innovations before the year of data.
     last_T_up_to_L = T_up_to_L[lastindex(T_up_to_L)]; # Year of the last transportation innovation before the year of data.
@@ -48,14 +57,6 @@ function solveLw_whenever(param, a, b, L_ss, tc, w_periods, L_periods, T_periods
     ##############################################################################################################
     ### Second step: Steady state of w, given fundamentals (a, b), L_D, and the last transportation innovation ###
     ##############################################################################################################
-
-    # Assign values from param
-    alpha = param[1]
-    theta = param[2]
-    epsilon = param[3]
-    phi = param[6]
-    H = param[7] * ones(nobs)
-    LL = param[8]
 
     # Initializations
     w_D = ones(nobs)
