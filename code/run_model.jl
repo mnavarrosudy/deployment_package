@@ -59,7 +59,7 @@ include(joinpath(file_dir, "lbfgs.jl"))
 =#
 
 
-#function run_model(experiment_num)
+function run_model(experiment_num)
     
     model         = 1; # Type of model -> 1: constant returns; 2: increasing returns (i.e. with aglomeration forces)
     diff_periods  = true; # Type of diff_periods -> false: same years for L and w; true: different years for L and w.
@@ -271,7 +271,7 @@ include(joinpath(file_dir, "lbfgs.jl"))
     a_ini, b_ini = get_ini_ab(a, b, w_D[1], L_D[1]);
 
     # Get the experiment to run
-    experiment_num      = 26;
+    #experiment_num      = 26;
     experiment_data_dir = joinpath(main_dir, "data", "experiments.txt");
     experiment_data     = readdlm(experiment_data_dir, '\t', Float64, '\n');
     experiment_vec      = vec(experiment_data[experiment_data[:, 1] .== experiment_num, 2:end]);
@@ -296,4 +296,4 @@ include(joinpath(file_dir, "lbfgs.jl"))
     # Close the file
     close(results_file);
 
-#end
+end
