@@ -1,4 +1,4 @@
-function weight_shortest_path(tc_on_grid, tc_weigth)
+function weight_shortest_path(nobs, tc_on_grid, tc_weigth)
 
     # Initialize vector of weighted counterfactual shortest path matrices for each period
     tc_ctfl_weighted = [zeros(Float64, nobs, nobs) for i in 1:lastindex(tc_weigth)];

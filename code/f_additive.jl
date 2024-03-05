@@ -47,7 +47,7 @@ function f_additive(psi_hat, params_to_est, param, w, L, tc_on_grid, wL_periods,
         tc_on_grid_weighted = [zeros(Float64, nobs, nobs) for i in 1:lastindex(T_periods)];
 
         for t in 1:lastindex(T_periods)
-            tc_on_grid_weighted[t] = weight_shortest_path(tc_on_grid[t], gamma_hat)
+            tc_on_grid_weighted[t] = weight_shortest_path(nobs, tc_on_grid[t], gamma_hat)
         end
 
         for d in 1:lastindex(L_periods)
@@ -79,7 +79,7 @@ function f_additive(psi_hat, params_to_est, param, w, L, tc_on_grid, wL_periods,
             if (lastindex(gamma_hat) == 1)
                 tc_on_grid_weighted[t] = tc_on_grid[t][1]
             else
-                tc_on_grid_weighted[t] = weight_shortest_path(tc_on_grid[t], gamma_hat)
+                tc_on_grid_weighted[t] = weight_shortest_path(nobs, tc_on_grid[t], gamma_hat)
             end
         end
 

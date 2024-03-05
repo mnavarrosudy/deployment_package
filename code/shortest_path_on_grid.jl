@@ -39,8 +39,8 @@ tc_distrib = [[1, 2, 3, 4, 5, 6, 7, 8], [0.0, 0.0, 0.2, 0.6, 0.2, 0.0, 0.0, 0.0]
     #sp_weighted = [zeros(Float64, nobs, nobs) for i in 1:periods];
 
     # Initialize vector of transportation cost matrices for each counterfactual scenario
-    distmx_ctfl = [zeros(Float64, nobs, nobs) for j in 1:lastindex(tc_value)];
-    sp_ctfl = [zeros(Float64, nobs, nobs) for j in 1:lastindex(tc_value)];
+    distmx_ctfl = [zeros(Float64, N^2, N^2) for j in 1:lastindex(tc_value)];
+    sp_ctfl = [zeros(Float64, N^2, N^2) for j in 1:lastindex(tc_value)];
     
     for c in 1:lastindex(tc_value) 
         distmx_ctfl[c] = dist_btw_nodes(N, adj_matrix, tc_walk, road_edges, tc_road, river_edges, tc_river, bridge_edges, tc_bridge, ferry_edges, tc_value[c]);
