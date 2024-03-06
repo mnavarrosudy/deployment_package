@@ -1,10 +1,10 @@
 ### BBGD Toy Model - Deployment package
 
-#### Steps to install Julia in your machine
+#### Install Julia in your machine
 
-1. 
+To download and install Julia, please follow [these instructions](https://julialang.org/downloads/).
 
-#### Steps to run this package from the command line on macOS
+#### Run this package from the command line on macOS
 
 1. Open Terminal.
 2. Type `julia` to launch Julia REPL from the Terminal.
@@ -22,6 +22,7 @@
     zsh: command not found: julia
     mnavarrosudy@MacBook-Pro ~ % export PATH=$PATH:/Applications/Julia-1.9.app/Contents/Resources/julia/bin
     mnavarrosudy@MacBook-Pro ~ % julia
+    julia>
     ```
 
 5. Type `pwd()` to print the current working directory.
