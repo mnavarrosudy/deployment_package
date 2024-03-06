@@ -4,6 +4,10 @@
 
 To download and install Julia, please follow [these instructions](https://julialang.org/downloads/).
 
+#### Download deployment package folder
+
+To download the deployment package folder, please follow [this link](https://github.com/mnavarrosudy/deployment_package/archive/refs/heads/main.zip).
+
 #### Run this package from the command line on macOS
 
 1. Open Terminal.
@@ -12,18 +16,18 @@ To download and install Julia, please follow [these instructions](https://julial
     Example:
     ```console
     mnavarrosudy@MacBook-Pro ~ % julia
-    ```
-
-3. If `julia` is not in the path, type: `export PATH=$PATH:/Applications/Julia-x.x.app/Contents/Resources/julia/bin`, replacing x.x with the number of your Julia version.
-4. Type `julia` again. You should see Julia REPL initializing (you will notice this because the Julia logo should appear, and the next command will be preceded by julia>).
-
-    Example:
-    ```console
-    zsh: command not found: julia
-    mnavarrosudy@MacBook-Pro ~ % export PATH=$PATH:/Applications/Julia-1.9.app/Contents/Resources/julia/bin
-    mnavarrosudy@MacBook-Pro ~ % julia
     julia>
     ```
+    
+    - Note: If `julia` is not in the path, type: `export PATH=$PATH:/Applications/Julia-x.x.app/Contents/Resources/julia/bin`, replacing x.x with the number of your Julia version. Type `julia` again.
+
+        Example:
+        ```console
+        zsh: command not found: julia
+        mnavarrosudy@MacBook-Pro ~ % export PATH=$PATH:/Applications/Julia-1.9.app/Contents/Resources/julia/bin
+        mnavarrosudy@MacBook-Pro ~ % julia
+        julia>
+        ```
 
 5. Type `pwd()` to print the current working directory.
 6. Find the full pathname on your machine for the directory `~/deployment_package/code`. For example, on my machine, the full `"path"` to that directory is `"/Users/mnavarrosudy/Desktop/deployment_package/code"`.
